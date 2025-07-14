@@ -6,27 +6,23 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:03:02 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/07/12 21:55:37 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/07/14 17:00:58 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include "include/push_swap.h"
 
-//#define INITIAL_BUFFER_SIZE 4
+int	*parse_input(int argc, char ***argv);
 
-//void	parse_input(int argc, char **argv);
-
-int	main(void) //main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-//	int	*stack_a;
-//	int	*stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
-	// Initialize stack_a in the heap with calloc.
-
-	//parse_input(argc, argv);
-
-ft_putstr_fd("Yes!", 1);
+	stack_a = parse_input(argc, &argv);
+	stack_b = init_stack();
 
 	return (EXIT_SUCCESS);
 }
@@ -46,5 +42,6 @@ void	parse_input(int argc, char **argv)
 	//		free split
 	//		increment argument
 
+	// Initialize stack_a in the heap with calloc.
 }
 */
