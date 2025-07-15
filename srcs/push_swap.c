@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:03:02 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/07/15 20:48:17 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/07/15 21:18:22 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main(int argc, char **argv)
 	
 	// sort
 
+	// test prints
 	print_stack(&a, "Stack a");
 	print_stack(&b, "Stack b");
 
