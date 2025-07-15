@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 19:50:37 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/07/15 20:47:26 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/07/15 21:17:52 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	double_stack_capacity(t_stack *stack)
     if (!new_buffer)
 	{
 		free(stack->buffer);
-		stack->buffer = NULL; // Think about this again
+		stack->buffer = NULL;
 		print_error_and_exit();
 	}
 	i = 0;
