@@ -6,7 +6,7 @@
 #    By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/08 18:03:57 by pecavalc          #+#    #+#              #
-#    Updated: 2025/07/12 22:02:16 by pecavalc         ###   ########.fr        #
+#    Updated: 2025/07/15 20:39:00 by pecavalc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ NAME = push_swap
 SRCS_DIR = srcs
 OBJS_DIR = objs
 
-SRCS =  push_swap.c
+SRCS =  push_swap.c input_parsing_and_validation.c stack_management.c \
+		stack_operations.c printing.c test.c
 OBJS = $(patsubst %.c,$(OBJS_DIR)/%.o,$(SRCS))
 
 HEADERS_DIR = srcs/include
