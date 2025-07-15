@@ -16,7 +16,7 @@
 void    push(int nbr, t_stack *stack) //
 {
     if (stack->size + 1 > stack->capacity)
-        double_stack_capacity(stack); // TODO: implement double_capacity
+        double_stack_capacity(stack);
     stack->top = (stack->top - 1 + stack->capacity) % stack->capacity;
     stack->buffer[stack->top] = nbr;
     stack->size++;
