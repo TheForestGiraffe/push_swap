@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   input_parsing_and_validation.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 14:03:02 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/07/15 20:48:17 by pecavalc         ###   ########.fr       */
+/*   Created: 2025/07/15 19:44:32 by pecavalc          #+#    #+#             */
+/*   Updated: 2025/07/15 20:48:10 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> // TODO: remove
 #include <stdlib.h>
 #include "libft.h"
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+void	parse_and_validate_input(int argc, char **argv, t_stack *a)
 {
-    t_stack a;
-    t_stack b;
-
-    if (argc == 1)
-        return (0);
-    initialize_stack(&a, INITIAL_CAPACITY);
-    parse_and_validate_input(argc, argv, &a); // TODO: further validation checks
-	initialize_stack(&b, a.capacity);
+	int		i;
+	int		j;
+	char	**split_str;
 	
-	// sort
-
-	print_stack(&a, "Stack a");
-	print_stack(&b, "Stack b");
-
-	free_stacks(&a, &b);
-
-    return (EXIT_SUCCESS);
+    i = 1;
+    while (i < argc)
+    {
+        split_str = ft_split(argv[i++], ' ');
+        if (!split_str)
+            print_error_and_exit();
+        j = 0;
+        while (split_str[j])
+            push(ft_atoi(split_str[j++]), a); // TODO: Add safeguards to atoi or write and use strtol instead
+        free(split_str);
+    }
 }
