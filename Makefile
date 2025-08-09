@@ -6,7 +6,7 @@
 #    By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/08 18:03:57 by pecavalc          #+#    #+#              #
-#    Updated: 2025/07/15 20:39:00 by pecavalc         ###   ########.fr        #
+#    Updated: 2025/08/08 16:23:13 by pecavalc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,11 @@ NAME = push_swap
 SRCS_DIR = srcs
 OBJS_DIR = objs
 
-SRCS =  push_swap.c input_parsing_and_validation.c stack_management.c \
-		stack_operations.c printing.c test.c
+SRCS =  push_swap.c parse_and_validate_input.c stack_management.c \
+		stack_operations.c print_error_and_exit.c print_stack.c 
+
+# TODO:remove print_stack.c
+
 OBJS = $(patsubst %.c,$(OBJS_DIR)/%.o,$(SRCS))
 
 HEADERS_DIR = srcs/include

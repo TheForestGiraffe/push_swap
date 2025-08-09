@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:03:02 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/07/15 21:18:22 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/08 16:13:28 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ int main(int argc, char **argv)
     if (argc == 1)
         return (0);
     initialize_stack(&a, INITIAL_CAPACITY);
-    parse_and_validate_input(argc, argv, &a); // TODO: further validation checks
+    parse_and_validate_input(argc, argv, &a);
 	initialize_stack(&b, a.capacity);
 	
 	// sort
 
-	// test prints
+	// TODO: test prints, remove
 	print_stack(&a, "Stack a");
 	print_stack(&b, "Stack b");
 

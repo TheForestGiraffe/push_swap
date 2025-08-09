@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:04:44 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/07/15 20:48:01 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/08 16:08:18 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ void    double_stack_capacity(t_stack *stack);
 void	free_stacks(t_stack *a, t_stack *b);
 
 // Stack operations 
-void    push(int nbr, t_stack *stack);
+void    push_nbr_to_stack(int nbr, t_stack *stack);
+int		get_nbr_from_stack(size_t position, t_stack *stack);
 
 // Error handling
 void    print_error_and_exit(void);
