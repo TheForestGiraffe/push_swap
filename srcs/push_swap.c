@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:03:02 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/08 16:13:28 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/09 22:37:17 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,44 @@ int main(int argc, char **argv)
 	// sort
 
 	// TODO: test prints, remove
+	print_stack(&a, "Stack a");
+	print_stack(&b, "Stack b");
+	pb(&a, &b);
+	pb(&a, &b);
+	pb(&a, &b);
+	pb(&a, &b);
+	print_stack(&a, "Stack a");
+	print_stack(&b, "Stack b");
+	ra(&a);
+	ra(&a);
+	ra(&a);
+	ra(&a);
+	ra(&a);
+	ra(&a);
+	ra(&a);
+	ra(&a);
+	ra(&a);
+	ra(&a);
+	rb(&b);
+	rb(&b);
+	rb(&b);
+	rb(&b);
+	print_stack(&a, "Stack a");
+	print_stack(&b, "Stack b");
+	rra(&a);
+	rra(&a);
+	rra(&a);
+	rra(&a);
+	rra(&a);
+	rra(&a);
+	rra(&a);
+	rra(&a);
+	rra(&a);
+	rra(&a);
+	rrb(&b);
+	rrb(&b);
+	rrb(&b);
+	rrb(&b);
 	print_stack(&a, "Stack a");
 	print_stack(&b, "Stack b");
 

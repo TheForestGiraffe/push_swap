@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 19:44:32 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/08 16:08:51 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/09 22:00:05 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 #include "libft.h"
 #include "push_swap.h"
 
-int		is_numeric_string(char *str);
-int		is_in_stack(t_stack *stack, int nbr);
-void	free_strings_array(char **strings_array);
-void	free_strings_array_print_error_and_exit(char **strings_array);
-int		push_swap_atoi(const char *str, char **strings_array);
+static int		is_numeric_string(char *str);
+static void		free_strings_array(char **strings_array);
+static void		free_strings_array_print_error_and_exit(char **strings_array);
+static int		push_swap_atoi(const char *str, char **strings_array);
 
 void	parse_and_validate_input(int argc, char **argv, t_stack *a)
 {
@@ -42,13 +41,13 @@ void	parse_and_validate_input(int argc, char **argv, t_stack *a)
 			nbr = push_swap_atoi(strings_array[j++], strings_array);
 			if (is_in_stack(a, nbr))
 				free_strings_array_print_error_and_exit(strings_array);
-			push_nbr_to_stack(nbr, a);
+			add_to_stack(nbr, a);
 		}
 		free_strings_array(strings_array);
 	}
 }
 
-int	is_numeric_string(char *str)
+static int	is_numeric_string(char *str)
 {
 	int	i;
 
@@ -67,20 +66,7 @@ int	is_numeric_string(char *str)
 	return (1);
 }
 
-int	is_in_stack(t_stack *stack, int nbr)
-{
-	size_t	position;
-
-	position = 0;
-	while (position < stack->capacity)
-	{
-		if (nbr == get_nbr_from_stack(position++, stack))
-			return (1);
-	}
-	return (0);
-}
-
-void	free_strings_array(char **strings_array)
+static void	free_strings_array(char **strings_array)
 {
 	int	i;
 
@@ -90,13 +76,13 @@ void	free_strings_array(char **strings_array)
 	free(strings_array);
 }
 
-void	free_strings_array_print_error_and_exit(char **strings_array)
+static void	free_strings_array_print_error_and_exit(char **strings_array)
 {
 	free_strings_array(strings_array);
 	print_error_and_exit();
 }
 
-int	push_swap_atoi(const char *str, char **strings_array)
+static int	push_swap_atoi(const char *str, char **strings_array)
 {
 	int			i;
 	int			sign;

@@ -6,11 +6,10 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 19:50:37 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/07/15 21:17:52 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/09 21:44:06 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> // TODO: remove
 #include <stdlib.h>
 #include "libft.h"
 #include "push_swap.h"
@@ -22,7 +21,7 @@ void initialize_stack(t_stack *stack, size_t capacity)
     stack->top = 0;
     stack->buffer = (int *)ft_calloc(stack->capacity, sizeof(int));
     if (stack->buffer == NULL)
-        print_error_and_exit(); // TODO: What if a was already initialized? How to free all?
+        print_error_and_exit();
 }
 
 void	double_stack_capacity(t_stack *stack)
@@ -54,9 +53,15 @@ void	double_stack_capacity(t_stack *stack)
 
 void	free_stacks(t_stack *a, t_stack *b)
 {
-	free(a->buffer);
-	free(b->buffer);
-	a->buffer = NULL;
-	b->buffer = NULL;
+	if (!a)
+	{
+		free(a->buffer);
+		a->buffer = NULL;
+	}
+	if (!b)
+	{
+		free(b->buffer);
+		b->buffer = NULL;
+	}
 }
 
