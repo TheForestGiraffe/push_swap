@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:04:44 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/09 22:21:13 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/11 13:57:12 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,10 @@ void	sa(t_stack *a, t_stack *b);
 void	sb(t_stack *a, t_stack *b);
 void	ra(t_stack *a);
 void	rb(t_stack *b);
+void	rr(t_stack *a, t_stack *b);
 void	rra(t_stack *a);
 void	rrb(t_stack *b);
+void	rrr(t_stack *a, t_stack *b);
 
 // Error handling
 void    print_error_and_exit(void);
