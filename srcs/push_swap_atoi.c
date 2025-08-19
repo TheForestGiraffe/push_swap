@@ -6,11 +6,12 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 20:26:03 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/06 17:57:41 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/19 14:10:17 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <limits.h>
 
 int	push_swap_atoi(const char *str)
 {
