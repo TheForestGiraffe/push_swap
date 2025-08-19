@@ -3,6 +3,19 @@
 #include <unistd.h>
 #include <limits.h>
 
+static int	partition(int *array, int start, int end);
+
+void	quicksort(int *array, int start, int end)
+{
+	int	pivot;
+
+	if (end <= start)
+		return ;
+	pivot = partition(array, start, end);
+	quicksort(array, start, pivot - 1);
+	quicksort(array, pivot + 1, end);
+}
+
 static int	partition(int *array, int start, int end)
 {
 	int	j;
@@ -23,15 +36,4 @@ static int	partition(int *array, int start, int end)
 		j++;
 	}
 	return (i);
-}
-
-void	quicksort(int *array, int start, int end)
-{
-	int	pivot;
-
-	if (end <= start)
-		return ;
-	pivot = partition(array, start, end);
-	quicksort(array, start, pivot - 1);
-	quicksort(array, pivot + 1, end);
 }

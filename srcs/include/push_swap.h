@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:04:44 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/19 23:32:24 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/19 23:53:11 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,34 +32,45 @@ void    initialize_stack(t_stack *stack, size_t capacity, t_stack *other_stack);
 void    double_stack_capacity(t_stack *stack);
 void	free_stacks(t_stack *a, t_stack *b);
 
-// Stack operations 
+// Stack operations - standard
 int		get_from_stack(size_t position, t_stack *stack);
 int		is_in_stack(t_stack *stack, int nbr);
 int		pop_from_stack(t_stack *stack);
+
+// Stack operations - standard continued
 void    add_to_stack(int nbr, t_stack *stack);
 void    push_to_stack(int nbr, t_stack *stack);
 void	set_all_in_stack(t_stack *a, int *a_copy_sorted_ranks);
+void	swap_in_stack(t_stack *stack);
+
+// Stack operations - push_swap
 void	pb(t_stack *a, t_stack *b);
 void	pa(t_stack *a, t_stack *b);
-void	swap_in_stack(t_stack *stack);
 void	sa(t_stack *a, t_stack *b);
 void	sb(t_stack *a, t_stack *b);
 void	ra(t_stack *a);
+
+// Stack operations - push_swap continued
 void	rb(t_stack *b);
 void	rr(t_stack *a, t_stack *b);
 void	rra(t_stack *a);
 void	rrb(t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
 
-// Error handling
-void    print_error_and_exit(void);
-void	free_stacks_print_error_and_exit(t_stack *a, t_stack *b);
-
-// Sorting
+// Sorting of small stacks of size < 4
 void	sort_two_numbers(t_stack *a, t_stack *b);
 void	sort_three_numbers(t_stack *a, t_stack *b);
+
+// Stack indexing for Radix sort
 void	quicksort(int *array, int start, int end);
 void	index_stack(t_stack *a, t_stack *b);
+
+// Sorting of stacks of size > 3
+// TODO
+
+// Error printing, exiting and cleanup
+void    print_error_and_exit(void);
+void	free_stacks_print_error_and_exit(t_stack *a, t_stack *b);
 
 // For unit tests TODO: remove
 void	print_stack(t_stack *stack, char *name);
