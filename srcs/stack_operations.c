@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 19:57:16 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/11 13:58:48 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/19 14:16:32 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int	is_in_stack(t_stack *stack, int nbr)
 	position = 0;
 	while (position < stack->size)
 	{
-		if (nbr == read_from_stack(position++, stack))
+		if (nbr == get_from_stack(position++, stack))
 			return (1);
 	}
 	return (0);
 }
 
-int	read_from_stack(size_t position, t_stack *stack)
+int	get_from_stack(size_t position, t_stack *stack)
 {
 	size_t	i;
 
