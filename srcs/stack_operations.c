@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 19:57:16 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/19 14:16:32 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/19 23:26:36 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -191,4 +191,15 @@ void	rrr(t_stack *a, t_stack *b)
 	b->buffer[top_index] = b->buffer[(b->top + b->size - 1) % b->capacity];
 	b->top = top_index;
 	ft_putstr_fd("rrr\n", 1);
+}
+void	set_all_in_stack(t_stack *a, int *sorted_ranks)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < a->size)
+	{
+		a->buffer[(a->top + i) % a->capacity] = sorted_ranks[i];
+		i++;
+	}
 }
