@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:04:44 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/19 17:36:25 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/19 23:32:24 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int		is_in_stack(t_stack *stack, int nbr);
 int		pop_from_stack(t_stack *stack);
 void    add_to_stack(int nbr, t_stack *stack);
 void    push_to_stack(int nbr, t_stack *stack);
+void	set_all_in_stack(t_stack *a, int *a_copy_sorted_ranks);
 void	pb(t_stack *a, t_stack *b);
 void	pa(t_stack *a, t_stack *b);
 void	swap_in_stack(t_stack *stack);
@@ -58,6 +59,7 @@ void	free_stacks_print_error_and_exit(t_stack *a, t_stack *b);
 void	sort_two_numbers(t_stack *a, t_stack *b);
 void	sort_three_numbers(t_stack *a, t_stack *b);
 void	quicksort(int *array, int start, int end);
+void	index_stack(t_stack *a, t_stack *b);
 
 // For unit tests TODO: remove
 void	print_stack(t_stack *stack, char *name);
