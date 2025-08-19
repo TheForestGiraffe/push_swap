@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:03:02 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/11 14:01:14 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/19 14:25:49 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,30 +25,10 @@ int main(int argc, char **argv)
     initialize_stack(&a, INITIAL_CAPACITY);
     parse_and_validate_input(argc, argv, &a);
 	initialize_stack(&b, a.capacity);
-	
-	// sort
-
-	// TODO: test prints, remove
-	print_stack(&a, "Stack a");
-	print_stack(&b, "Stack b");
-	pb(&a, &b);
-	pb(&a, &b);
-	pb(&a, &b);
-	pb(&a, &b);
-	print_stack(&a, "Stack a");
-	print_stack(&b, "Stack b");
-	rr(&a, &b);
-	rr(&a, &b);
-	rr(&a, &b);
-	print_stack(&a, "Stack a");
-	print_stack(&b, "Stack b");
-	rrr(&a, &b);
-	rrr(&a, &b);
-	rrr(&a, &b);
-	print_stack(&a, "Stack a");
-	print_stack(&b, "Stack b");
-
+	if (a.size == 2)
+		sort_two_numbers(&a, &b);
+	if (a.size == 3)
+		sort_three_numbers(&a, &b);
 	free_stacks(&a, &b);
-
     return (EXIT_SUCCESS);
 }
