@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:04:44 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/11 13:57:12 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/19 14:17:40 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void    double_stack_capacity(t_stack *stack);
 void	free_stacks(t_stack *a, t_stack *b);
 
 // Stack operations 
-int		read_from_stack(size_t position, t_stack *stack);
+int		get_from_stack(size_t position, t_stack *stack);
 int		is_in_stack(t_stack *stack, int nbr);
 int		pop_from_stack(t_stack *stack);
 void    add_to_stack(int nbr, t_stack *stack);
@@ -52,6 +52,10 @@ void	rrr(t_stack *a, t_stack *b);
 
 // Error handling
 void    print_error_and_exit(void);
+
+// Sorting
+void	sort_two_numbers(t_stack *a, t_stack *b);
+void	sort_three_numbers(t_stack *a, t_stack *b);
 
 // For unit tests TODO: remove
 void	print_stack(t_stack *stack, char *name);
