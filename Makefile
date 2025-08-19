@@ -6,7 +6,7 @@
 #    By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/08 18:03:57 by pecavalc          #+#    #+#              #
-#    Updated: 2025/08/08 16:23:13 by pecavalc         ###   ########.fr        #
+#    Updated: 2025/08/19 17:37:37 by pecavalc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ SRCS_DIR = srcs
 OBJS_DIR = objs
 
 SRCS =  push_swap.c parse_and_validate_input.c stack_management.c \
-		stack_operations.c print_error_and_exit.c print_stack.c 
+		stack_operations.c print_error_and_exit.c print_stack.c \
+		sort_stacks_of_two_and_three_nbrs.c radix_sort.c quicksort.c
 
 # TODO:remove print_stack.c
 

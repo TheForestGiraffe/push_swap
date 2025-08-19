@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:04:44 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/19 14:17:40 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/19 17:36:25 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct s_stack {
 void	parse_and_validate_input(int argc, char **argv, t_stack *a);
 
 // Stack management
-void    initialize_stack(t_stack *stack, size_t capacity);
+void    initialize_stack(t_stack *stack, size_t capacity, t_stack *other_stack);
 void    double_stack_capacity(t_stack *stack);
 void	free_stacks(t_stack *a, t_stack *b);
 
@@ -52,10 +52,12 @@ void	rrr(t_stack *a, t_stack *b);
 
 // Error handling
 void    print_error_and_exit(void);
+void	free_stacks_print_error_and_exit(t_stack *a, t_stack *b);
 
 // Sorting
 void	sort_two_numbers(t_stack *a, t_stack *b);
 void	sort_three_numbers(t_stack *a, t_stack *b);
+void	quicksort(int *array, int start, int end);
 
 // For unit tests TODO: remove
 void	print_stack(t_stack *stack, char *name);
