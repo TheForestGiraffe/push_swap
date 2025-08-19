@@ -6,7 +6,7 @@
 #    By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/08 18:03:57 by pecavalc          #+#    #+#              #
-#    Updated: 2025/08/19 17:37:37 by pecavalc         ###   ########.fr        #
+#    Updated: 2025/08/19 23:26:03 by pecavalc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ OBJS_DIR = objs
 
 SRCS =  push_swap.c parse_and_validate_input.c stack_management.c \
 		stack_operations.c print_error_and_exit.c print_stack.c \
-		sort_stacks_of_two_and_three_nbrs.c radix_sort.c quicksort.c
+		sort_stacks_of_two_and_three_nbrs.c index_stack.c quicksort.c
 
-# TODO:remove print_stack.c
+# TODO:remove print_stack.c, and -g flag --------------------------------------
 
 OBJS = $(patsubst %.c,$(OBJS_DIR)/%.o,$(SRCS))
 
@@ -31,7 +31,7 @@ LIBFT = $(LIBFT_DIR)/libft.a
 LIBFT_HEADERS_DIR = $(LIBFT_DIR)/include
 LIBFT_HEADERS = $(LIBFT_HEADERS_DIR)/libft.h $(LIBFT_HEADERS_DIR)/libft_bonus.h
 
-CFLAGS = -Wall -Wextra -Werror -I$(HEADERS_DIR) -I$(LIBFT_HEADERS_DIR)
+CFLAGS = -Wall -Wextra -Werror -I$(HEADERS_DIR) -I$(LIBFT_HEADERS_DIR) -g
 
 GREEN = \033[0;32m
 
