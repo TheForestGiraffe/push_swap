@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:03:02 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/19 23:17:13 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/22 16:51:19 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,10 @@ int main(int argc, char **argv)
 	if (a.size > 3)
 	{
 		index_stack(&a, &b);
-		//radix_sort(&a,&b);
+		radix_sort(&a,&b);
 	}
-
 	// Test print sorted stack
-	print_stack(&a, "a");
-
+	//print_stack(&a, "a");
 	free_stacks(&a, &b);
 
     return (EXIT_SUCCESS);

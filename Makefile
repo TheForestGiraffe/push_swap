@@ -6,7 +6,7 @@
 #    By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/08 18:03:57 by pecavalc          #+#    #+#              #
-#    Updated: 2025/08/19 23:50:28 by pecavalc         ###   ########.fr        #
+#    Updated: 2025/08/21 11:42:11 by pecavalc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRCS =  push_swap.c parse_and_validate_input.c stack_management.c \
 		stack_operations_standard.c stack_operations_standard_continued.c \
 		print_error_and_exit.c test_print_stack.c \
 		sort_small_stacks.c index_stack.c quicksort.c \
-		stack_operations_push_swap.c stack_operations_push_swap_continued.c
+		stack_operations_push_swap.c stack_operations_push_swap_continued.c \
+		radix_sort.c
 
 OBJS = $(patsubst %.c,$(OBJS_DIR)/%.o,$(SRCS))
 

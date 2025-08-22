@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:04:44 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/19 23:53:11 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/21 11:41:57 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	quicksort(int *array, int start, int end);
 void	index_stack(t_stack *a, t_stack *b);
 
 // Sorting of stacks of size > 3
-// TODO
+void	radix_sort(t_stack *a, t_stack *b);
 
 // Error printing, exiting and cleanup
 void    print_error_and_exit(void);
