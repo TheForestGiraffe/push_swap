@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:04:44 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/21 11:41:57 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/25 14:33:51 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,10 @@ void	rra(t_stack *a);
 void	rrb(t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
 
-// Sorting of small stacks of size < 4
+// Sorting of small stacks of size < 6
 void	sort_two_numbers(t_stack *a, t_stack *b);
 void	sort_three_numbers(t_stack *a, t_stack *b);
+void	sort_four_to_five_numbers(t_stack *a, t_stack *b);
 
 // Stack indexing for Radix sort
 void	quicksort(int *array, int start, int end);

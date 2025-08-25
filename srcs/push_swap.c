@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:03:02 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/22 16:51:19 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/25 15:55:20 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,15 @@ int main(int argc, char **argv)
 		sort_two_numbers(&a, &b);
 	if (a.size == 3)
 		sort_three_numbers(&a, &b);
-	if (a.size > 3)
+	if (a.size == 4 || a.size == 5)
+		sort_four_to_five_numbers(&a, &b);
+	if (a.size > 5)
 	{
 		index_stack(&a, &b);
 		radix_sort(&a,&b);
 	}
 	// Test print sorted stack
-	//print_stack(&a, "a");
+	print_stack(&a, "a");
 	free_stacks(&a, &b);
 
     return (EXIT_SUCCESS);

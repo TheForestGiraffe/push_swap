@@ -6,7 +6,7 @@
 #    By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/08 18:03:57 by pecavalc          #+#    #+#              #
-#    Updated: 2025/08/21 11:42:11 by pecavalc         ###   ########.fr        #
+#    Updated: 2025/08/25 15:29:26 by pecavalc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,20 @@ OBJS_DIR = objs
 
 # TODO:remove print_stack.c, and -g flag --------------------------------------
 
-SRCS =  push_swap.c parse_and_validate_input.c stack_management.c \
-		stack_operations_standard.c stack_operations_standard_continued.c \
-		print_error_and_exit.c test_print_stack.c \
-		sort_small_stacks.c index_stack.c quicksort.c \
-		stack_operations_push_swap.c stack_operations_push_swap_continued.c \
-		radix_sort.c
+SRCS =  push_swap.c \
+		parse_and_validate_input.c \
+		stack_management.c \
+		stack_operations_standard.c \
+		stack_operations_standard_continued.c \
+		print_error_and_exit.c \
+		sort_stacks_of_two_and_three.c \
+		sort_stacks_of_four_and_five.c \
+		index_stack.c \
+		quicksort.c \
+		radix_sort.c \
+		stack_operations_push_swap.c \
+		stack_operations_push_swap_continued.c \
+		test_print_stack.c \
 
 OBJS = $(patsubst %.c,$(OBJS_DIR)/%.o,$(SRCS))
 
