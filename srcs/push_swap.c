@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:03:02 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/25 15:55:20 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/25 23:31:22 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> // TODO: remove
 #include <stdlib.h>
 #include "libft.h"
 #include "push_swap.h"
@@ -31,14 +30,11 @@ int main(int argc, char **argv)
 		sort_three_numbers(&a, &b);
 	if (a.size == 4 || a.size == 5)
 		sort_four_to_five_numbers(&a, &b);
-	if (a.size > 5)
+	if (a.size > 5 && !is_sorted(&a))
 	{
 		index_stack(&a, &b);
 		radix_sort(&a,&b);
 	}
-	// Test print sorted stack
-	print_stack(&a, "a");
 	free_stacks(&a, &b);
-
     return (EXIT_SUCCESS);
 }

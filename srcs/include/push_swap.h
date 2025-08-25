@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:04:44 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/25 14:33:51 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/25 23:26:57 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_stack {
 
 // Input parsing and validation
 void	parse_and_validate_input(int argc, char **argv, t_stack *a);
+int		is_sorted(t_stack *a);
 
 // Stack management
 void    initialize_stack(t_stack *stack, size_t capacity, t_stack *other_stack);
@@ -66,14 +67,12 @@ void	sort_four_to_five_numbers(t_stack *a, t_stack *b);
 void	quicksort(int *array, int start, int end);
 void	index_stack(t_stack *a, t_stack *b);
 
-// Sorting of stacks of size > 3
+// Sorting of stacks of size > 5
 void	radix_sort(t_stack *a, t_stack *b);
 
 // Error printing, exiting and cleanup
 void    print_error_and_exit(void);
+void	free_stacks_and_exit(t_stack *a, t_stack *b);
 void	free_stacks_print_error_and_exit(t_stack *a, t_stack *b);
-
-// For unit tests TODO: remove
-void	print_stack(t_stack *stack, char *name);
 
 #endif

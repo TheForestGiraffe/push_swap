@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks_of_two_and_three.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 14:02:36 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/25 14:51:04 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/25 23:17:40 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

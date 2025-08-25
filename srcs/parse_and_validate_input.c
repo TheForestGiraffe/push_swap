@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_and_validate_input.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 19:44:32 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/09 22:00:05 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/25 23:17:11 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	parse_and_validate_input(int argc, char **argv, t_stack *a)
 	while (i < argc)
 	{
 		strings_array = ft_split(argv[i++], ' ');
-		if (!strings_array)
+		if (!strings_array || !strings_array[0])
 			print_error_and_exit();
 		j = 0;
 		while (strings_array[j])

@@ -1,16 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_stack.c                                      :+:      :+:    :+:   */
+/*   test_print_stack.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 20:05:50 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/19 17:24:52 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/25 23:38:43 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// TODO: Remove
 
 #include "push_swap.h"
 #include <stdlib.h>

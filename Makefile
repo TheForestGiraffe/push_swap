@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+         #
+#    By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/08 18:03:57 by pecavalc          #+#    #+#              #
-#    Updated: 2025/08/25 15:29:26 by pecavalc         ###   ########.fr        #
+#    Updated: 2025/08/25 23:25:35 by pecavalc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,9 @@ NAME = push_swap
 SRCS_DIR = srcs
 OBJS_DIR = objs
 
-# TODO:remove print_stack.c, and -g flag --------------------------------------
-
 SRCS =  push_swap.c \
 		parse_and_validate_input.c \
+		is_sorted.c \
 		stack_management.c \
 		stack_operations_standard.c \
 		stack_operations_standard_continued.c \
@@ -30,7 +29,6 @@ SRCS =  push_swap.c \
 		radix_sort.c \
 		stack_operations_push_swap.c \
 		stack_operations_push_swap_continued.c \
-		test_print_stack.c \
 
 OBJS = $(patsubst %.c,$(OBJS_DIR)/%.o,$(SRCS))
 

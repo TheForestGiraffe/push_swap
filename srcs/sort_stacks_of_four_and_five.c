@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks_of_four_and_five.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 14:02:36 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/25 15:50:01 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/25 23:37:39 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static void	find_smallest_and_pb(t_stack *a, t_stack *b);
+static void	smallest_to_top(t_stack *a, int smallest_nbr, size_t index);
 
 void	sort_four_to_five_numbers(t_stack *a, t_stack *b)
 {
@@ -21,6 +22,8 @@ void	sort_four_to_five_numbers(t_stack *a, t_stack *b)
 		free_stacks(a, b);
 		print_error_and_exit();
 	}
+	if (is_sorted(a))
+		free_stacks_and_exit(a, b);
 	if (a->size == 5)
 		find_smallest_and_pb(a, b);
 	find_smallest_and_pb(a, b);
@@ -51,18 +54,23 @@ static void	find_smallest_and_pb(t_stack *a, t_stack *b)
 		}
 		i++;
 	}
+	smallest_to_top(a, smallest_nbr, smallest_nbr_index);
+	pb(a, b);
+}
+
+static void	smallest_to_top(t_stack *a, int smallest_nbr, size_t index)
+{
 	while (get_from_stack(0, a) != smallest_nbr)
 	{
-		if (smallest_nbr_index <= a->size / 2)
+		if (index <= a->size / 2)
 		{
 			ra(a);
-			smallest_nbr_index--;
+			index--;
 		}
 		else
 		{
 			rra(a);
-			smallest_nbr_index++;
+			index++;
 		}
 	}
-	pb(a, b);
 }
