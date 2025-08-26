@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 19:57:16 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/19 23:43:52 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/26 15:29:32 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	get_from_stack(size_t position, t_stack *stack)
 int	pop_from_stack(t_stack *stack)
 {
 	int	nbr;
-	
+
 	nbr = stack->buffer[stack->top];
 	stack->top = (stack->top + 1) % stack->capacity;
 	stack->size--;

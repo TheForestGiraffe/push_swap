@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_operations_standard_continued.c              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 19:57:16 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/25 23:38:28 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/26 15:29:23 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,30 @@
 #include <libft.h>
 #include "push_swap.h"
 
-void    push_to_stack(int nbr, t_stack *stack)
+void	push_to_stack(int nbr, t_stack *stack)
 {
-    stack->top = (stack->top - 1 + stack->capacity) % stack->capacity;
-    stack->buffer[stack->top] = nbr;
-    stack->size++;
+	stack->top = (stack->top - 1 + stack->capacity) % stack->capacity;
+	stack->buffer[stack->top] = nbr;
+	stack->size++;
 }
 
-void    add_to_stack(int nbr, t_stack *stack)
+void	add_to_stack(int nbr, t_stack *stack)
 {
-    if (stack->size + 1 > stack->capacity)
-        double_stack_capacity(stack);
-    stack->buffer[(stack->top + stack->size) % stack->capacity] = nbr;
-    stack->size++;
+	if (stack->size + 1 > stack->capacity)
+		double_stack_capacity(stack);
+	stack->buffer[(stack->top + stack->size) % stack->capacity] = nbr;
+	stack->size++;
 }
 
 void	swap_in_stack(t_stack *stack)
 {
-	int	temp;
+	int		temp;
+	t_stack	*s;
 
-	temp = stack->buffer[stack->top];
-	stack->buffer[stack->top] = stack->buffer[(stack->top + 1) % stack->capacity];
-	stack->buffer[(stack->top + 1) % stack->capacity] = temp;
+	s = stack;
+	temp = s->buffer[s->top];
+	s->buffer[s->top] = s->buffer[(s->top + 1) % s->capacity];
+	s->buffer[(s->top + 1) % s->capacity] = temp;
 }
 
 void	set_all_in_stack(t_stack *a, int *sorted_ranks)

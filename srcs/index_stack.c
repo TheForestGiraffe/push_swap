@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 17:25:43 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/19 23:27:44 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/26 15:18:23 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	index_stack(t_stack *a, t_stack *b)
 	int		*sorted_ranks;
 
 	if (!a || !b)
-	free_stacks_print_error_and_exit(a, b);
+		free_stacks_print_error_and_exit(a, b);
 	a_copy = copy_stack_to_new_array(a);
 	if (!a_copy)
 		free_stacks_print_error_and_exit(a, b);
@@ -44,6 +44,7 @@ void	index_stack(t_stack *a, t_stack *b)
 	set_all_in_stack(a, sorted_ranks);
 	free_arrays(a_copy, a_copy_sorted, sorted_ranks);
 }
+
 static int	*copy_stack_to_new_array(t_stack *stack)
 {
 	int		*copy;
@@ -85,8 +86,8 @@ static int	*array_to_ranks(int *a_copy, int *a_copy_sorted, size_t size)
 		{
 			if (a_copy[i] == a_copy_sorted[j])
 			{
-				sorted_ranks[i] = j; 
-				break;
+				sorted_ranks[i] = j;
+				break ;
 			}
 			j++;
 		}
@@ -94,6 +95,7 @@ static int	*array_to_ranks(int *a_copy, int *a_copy_sorted, size_t size)
 	}
 	return (sorted_ranks);
 }
+
 static void	free_arrays(int *array_1, int *array_2, int *array_3)
 {
 	free(array_1);

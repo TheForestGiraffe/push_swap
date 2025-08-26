@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:04:44 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/25 23:26:57 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/26 15:16:24 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@
 # include <stdlib.h>
 
 typedef struct s_stack {
-    size_t  capacity;
-    size_t  size;
-    size_t  top;
-    int     *buffer;
-}           t_stack;
+	size_t	capacity;
+	size_t	size;
+	size_t	top;
+	int		*buffer;
+}			t_stack;
 
 // Input parsing and validation
 void	parse_and_validate_input(int argc, char **argv, t_stack *a);
 int		is_sorted(t_stack *a);
 
 // Stack management
-void    initialize_stack(t_stack *stack, size_t capacity, t_stack *other_stack);
-void    double_stack_capacity(t_stack *stack);
+void	initialize_stack(t_stack *stack, size_t capacity, t_stack *other_stack);
+void	double_stack_capacity(t_stack *stack);
 void	free_stacks(t_stack *a, t_stack *b);
 
 // Stack operations - standard
@@ -39,8 +39,8 @@ int		is_in_stack(t_stack *stack, int nbr);
 int		pop_from_stack(t_stack *stack);
 
 // Stack operations - standard continued
-void    add_to_stack(int nbr, t_stack *stack);
-void    push_to_stack(int nbr, t_stack *stack);
+void	add_to_stack(int nbr, t_stack *stack);
+void	push_to_stack(int nbr, t_stack *stack);
 void	set_all_in_stack(t_stack *a, int *a_copy_sorted_ranks);
 void	swap_in_stack(t_stack *stack);
 
@@ -71,7 +71,7 @@ void	index_stack(t_stack *a, t_stack *b);
 void	radix_sort(t_stack *a, t_stack *b);
 
 // Error printing, exiting and cleanup
-void    print_error_and_exit(void);
+void	print_error_and_exit(void);
 void	free_stacks_and_exit(t_stack *a, t_stack *b);
 void	free_stacks_print_error_and_exit(t_stack *a, t_stack *b);
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks_of_four_and_five.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 14:02:36 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/25 23:37:39 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/26 15:21:12 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	sort_four_to_five_numbers(t_stack *a, t_stack *b)
 	if (b->size == 2 && (get_from_stack(0, b) < get_from_stack(1, b)))
 		sb(a, b);
 	while (b->size > 0)
-    	pa(a, b);
+		pa(a, b);
 }
 
 static void	find_smallest_and_pb(t_stack *a, t_stack *b)

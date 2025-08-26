@@ -6,7 +6,7 @@
 /*   By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 19:57:16 by pecavalc          #+#    #+#             */
-/*   Updated: 2025/08/25 16:06:26 by pecavalc         ###   ########.fr       */
+/*   Updated: 2025/08/26 15:26:46 by pecavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ void	rra(t_stack *a)
 
 	if (a->size < 2)
 		return ;
-    if (a->top == 0)
-        top_index = a->capacity - 1;
-    else
+	if (a->top == 0)
+		top_index = a->capacity - 1;
+	else
 		top_index = a->top - 1;
 	a->buffer[top_index] = a->buffer[(a->top + a->size - 1) % a->capacity];
 	a->top = top_index;
@@ -70,9 +70,9 @@ void	rrr(t_stack *a, t_stack *b)
 
 	if (a->size < 2 || b->size < 2)
 		return ;
-    if (a->top == 0)
-        top_index = a->capacity - 1;
-    else
+	if (a->top == 0)
+		top_index = a->capacity - 1;
+	else
 		top_index = a->top - 1;
 	a->buffer[top_index] = a->buffer[(a->top + a->size - 1) % a->capacity];
 	a->top = top_index;
