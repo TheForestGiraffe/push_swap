@@ -1,7 +1,11 @@
 # push_swap
 
-Sorting integers using a limited instruction set and two stacks (`a` and `b`).  
-Part of the 42 Berlin curriculum.
+Sorting integers using two stacks (`a` and `b`) and a restricted set of stack operations.
+
+Part of the 42 Berlin curriculum, this project focuses on algorithmic optimization, and data manipulation under constraints.
+
+The implementation is based primarily on a binary radix sort strategy, combined with specialized handling for small inputs and optimized stack rotations to minimize the total number of operations.
+
 
 ---
 
