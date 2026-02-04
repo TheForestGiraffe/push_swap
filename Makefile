@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pecavalc <pecavalc@student.42.fr>          +#+  +:+       +#+         #
+#    By: pecavalc <pecavalc@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/08 18:03:57 by pecavalc          #+#    #+#              #
-#    Updated: 2025/08/25 23:25:35 by pecavalc         ###   ########.fr        #
+#    Updated: 2026/02/04 02:32:15 by pecavalc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,10 +35,10 @@ OBJS = $(patsubst %.c,$(OBJS_DIR)/%.o,$(SRCS))
 HEADERS_DIR = srcs/include
 HEADERS = $(HEADERS_DIR)/push_swap.h
 
-LIBFT_DIR = ../Libft
+LIBFT_DIR = libs/Libft-2.2.1
 LIBFT = $(LIBFT_DIR)/libft.a
 LIBFT_HEADERS_DIR = $(LIBFT_DIR)/include
-LIBFT_HEADERS = $(LIBFT_HEADERS_DIR)/libft.h $(LIBFT_HEADERS_DIR)/libft_bonus.h
+LIBFT_HEADERS = $(LIBFT_HEADERS_DIR)/libft.h
 
 CFLAGS = -Wall -Wextra -Werror -I$(HEADERS_DIR) -I$(LIBFT_HEADERS_DIR) -g
 
@@ -55,7 +55,7 @@ $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c $(HEADERS)
 	cc $(CFLAGS) -c $< -o $@
 
 $(LIBFT):
-	$(MAKE) bonus -C ../Libft
+	$(MAKE) -C $(LIBFT_DIR)
 
 clean:
 	rm -f $(OBJS)
